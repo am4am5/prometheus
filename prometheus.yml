@@ -15,6 +15,18 @@
       - aismv-edms-jar:8080
       labels:
         service: 'edms'
+    - targets: 
+      - aismv-mailpers-jar:8080
+      labels:
+        service: 'mailpers'
+    - targets: 
+      - aismv-fsm-jar:8080
+      labels:
+        service: 'fsm'
+    - targets: 
+      - aismv-antivirus-jar:8080
+      labels:
+        service: 'antivirus'
 
 
 'prometheus.io/scrape': 'true'

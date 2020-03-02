@@ -7,15 +7,15 @@ extraScrapeConfigs: |
     - targets:
       - aismv-dfs-jar:8080
       labels:
-	service: 'dfs'
+        service: 'dfs'
     - targets:
       - aismv-eds-jar:8080
       labels:
-	service: 'eds'
+        service: 'eds'
     - targets:
       - aismv-edms-jar:8080
       labels:
-	service: 'edms'
+        service: 'edms'
     - targets:
       - aismv-mailpers-jar:8080
       labels:

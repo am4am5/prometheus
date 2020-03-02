@@ -1,0 +1,30 @@
+- job_name: 'spring-actuator'
+    metrics_path: '/actuator/prometheus'
+    scheme: http
+    scrape_interval: 5s
+    static_configs:
+    - targets: ['aismv-dfs-jar:8080']
+      labels:
+        service: 'dfs'
+    - targets: ['aismv-eds-jar:8080']
+      labels:
+        service: 'eds'
+    - targets: ['aismv-edms-jar:8080']
+      labels:
+        service: 'edms'
+    - targets: ['aismv-mailpers-jar:8080']
+      labels:
+        service: 'mailpers'
+    - targets: ['aismv-fsm-jar:8080']
+      labels:
+        service: 'fsm'
+    - targets: ['aismv-antivirus-jar:8080']
+      labels:
+        service: 'antivirus'
+
+
+
+'prometheus.io/scrape': 'true'
+'prometheus.io/scheme': 'http'
+'prometheus.io/path': '/actuator/prometheus'
+'prometheus.io/port': '8080'
